@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Be My Valentine 💖</title>
+
+<style>
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    font-family: system-ui, sans-serif;
+    background: linear-gradient(135deg, #ff5f8f, #ff9acb);
+    height: 100vh;
+    overflow: hidden;
+  }
+
+  .page {
+    display: none;
+    height: 100vh;
+    width: 100vw;
+    padding: 20px;
+    position: relative;
+    text-align: center;
+  }
+
+  .active { display: block; }
+
+  .content {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    padding: 0 20px;
+  }
+
+  h1 {
+    color: #fff;
+    font-size: 24px;
+    margin-bottom: 12px;
+  }
+
+  p {
+    color: #fff;
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+
+  button {
+    width: 85%;
+    max-width: 320px;
+    padding: 14px;
+    margin: 10px auto;
+    display: block;
+    border: none;
+    border-radius: 30px;
+    font-size: 18px;
+    font-weight: bold;
+  }
+
+  .yes {
+    background: #ff1f5a;
+    color: #fff;
+    box-shadow: 0 6px 20px rgba(255,31,90,0.5);
+    position: relative;
+    z-index: 2;
+  }
+
+  .no {
+    background: #444;
+    color: #fff;
+    position: absolute;
+    z-index: 1;
+  }
+
+  .gallery {
+    display: flex;
+    gap: 15px;
+    overflow-x: auto;
+    padding: 10px;
+  }
+
+  .card {
+    min-width: 120px;
+    height: 160px;
+    background: #fff;
+    border-radius: 14px;
+    padding: 8px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  }
+
+  .card img {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+  }
+
+  .heart {
+    position: fixed;
+    top: -10%;
+    pointer-events: none;
+    animation: fall 4s linear forwards;
+  }
+
+  @keyframes fall {
+    to { transform: translateY(120vh); opacity: 0; }
+  }
+</style>
+</head>
+<body>
+
+<!-- PAGE 1 -->
+<div class="page active" id="page1">
+  <div class="content">
+    <h1>Hey… I have something important 😳💗</h1>
+    <p>Do you want to know?</p>
+    <button class="yes" id="yes1" onclick="goTo(2)">Yes, tell me! 💌</button>
+  </div>
+  <button class="no" id="no1">No, go away 😒</button>
+</div>
+
+<!-- PAGE 2 -->
+<div class="page" id="page2">
+  <div class="content">
+    <h1>Will you be my Valentine? 🥺❤️</h1>
+    <button class="yes" id="yes2" onclick="goTo(3)">YES 💖</button>
+  </div>
+  <button class="no" id="no2">NO 💔</button>
+</div>
+
+<!-- PAGE 3 -->
+<div class="page" id="page3">
+  <div class="content">
+    <h1>Are you REALLY sure? 😭💘</h1>
+    <p>My heart can’t handle a no...</p>
+    <button class="yes" onclick="goTo(4)">YES I’m sure 💕</button>
+    <button class="no" onclick="alert('Thinking is disabled on Valentine’s Day 😌')" style="top:80%;left:50%;transform:translateX(-50%)">Let me think 🤔</button>
+  </div>
+</div>
+
+<!-- PAGE 4 -->
+<div class="page" id="page4">
+  <div class="content">
+    <h1>YAYYYYY!!! 🎉💃🕺</h1>
+    <p>I loveeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee<br>eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee<BR>eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee uhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh<br>hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh babyyyyyy girllllllll 💖</p>
+    <button class="yes" onclick="goTo(45)">Your cute pictures ehehe 📸</button>
+  </div>
+</div>
+
+<!-- PAGE 4.5 -->
+<div class="page" id="page45">
+  <div class="content">
+    <h1>Our Cute Moments 💞</h1>
+    <p>Swipe to see photos</p>
+
+    <div class="gallery">
+      <div class="card"><img src="1.jpeg"></div>
+      <div class="card"><img src="2.jpeg"></div>
+      <div class="card"><img src="3.jpeg"></div>
+      <div class="card"><img src="4.jpeg"></div>
+      <div class="card"><img src="5.jpeg"></div>
+      <div class="card"><img src="6.jpeg"></div>
+      <div class="card"><img src="7.jpeg"></div>
+      <div class="card"><img src="8.jpeg"></div>
+      <div class="card"><img src="9.jpeg"></div>
+      <div class="card"><img src="10.jpeg"></div>
+      <div class="card"><img src="11.jpeg"></div>
+      <div class="card"><img src="12.jpeg"></div>
+      <div class="card"><img src="13.jpeg"></div>
+      <div class="card"><img src="14.jpeg"></div>
+      <div class="card"><img src="15.jpeg"></div>
+      <div class="card"><img src="16.jpeg"></div>
+      <div class="card"><img src="17.jpeg"></div>
+      <div class="card"><img src="18.jpeg"></div>
+      <div class="card"><img src="19.jpeg"></div>
+      <div class="card"><img src="20.jpeg"></div>
+      <div class="card"><img src="21.jpeg"></div>
+      <div class="card"><img src="22.jpeg"></div>
+      <!-- <div class="card"><img src="12.jpeg"></div>
+      <div class="card"><img src="12.jpeg"></div> -->
+    </div>
+
+    <button class="yes" onclick="goTo(5)">Final Surprise 💌</button>
+  </div>
+</div>
+
+<!-- PAGE 5 -->
+<div class="page" id="page5">
+  <div class="content">
+    <h1>I made this website for you  ❤️</h1>
+    <p>So… you can’t say no now 😏💖</p>
+    <p>You are officially my Valentine 💝</p>
+    <p>I'm sorry for asking so late to be my valentine babyyy girl, but ordinary asking wasn't enough for a cutie like you babeeee I loveeeeeeeeeeeeeeeeeeee uhhhhhhhhhhhhhhhhhhh so much <br> All I wanna say you is that I really love you and I'll always love uhhhhh To Be Honest naa babeee I don't known how to celebrate <hr> the Valentine Day but I really likee uhhh I don't know what to say much but HAPPY VALENTINE DAY (IN ADVANCE BABE)</p>
+
+    <!-- <button class="yes">Send me a heart ❤️</button>
+    <button class="yes">Screenshot this 😜</button> -->
+  </div>
+</div>
+
+<script>
+  function goTo(num) {
+    document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+    document.getElementById('page' + num).classList.add('active');
+    setInitialNoPosition();
+  }
+
+  const noTexts = [
+    "Try Again 😜",
+    "Not This Time 😏",
+    "Nice Try 😂",
+    "Almost 😆",
+    "Nopeee 😝",
+    "Missed Me 😎",
+    "Too Slow 🐌",
+    "Haha Not Here 🤭"
+  ];
+
+  function dodge(btn, yesBtn) {
+    const padding = 20;
+    const yesRect = yesBtn.getBoundingClientRect();
+
+    let x, y, tries = 0;
+
+    do {
+      x = Math.random() * (window.innerWidth - btn.offsetWidth - padding);
+      y = Math.random() * (window.innerHeight - btn.offsetHeight - padding);
+      tries++;
+    } while (
+      x > yesRect.left - 20 &&
+      x < yesRect.right + 20 &&
+      y > yesRect.top - 20 &&
+      y < yesRect.bottom + 20 &&
+      tries < 20
+    );
+
+    btn.style.left = x + "px";
+    btn.style.top = y + "px";
+    btn.innerText = noTexts[Math.floor(Math.random() * noTexts.length)];
+  }
+
+  function setInitialNoPosition() {
+    const active = document.querySelector('.page.active');
+    const noBtn = active.querySelector('.no');
+    const yesBtn = active.querySelector('.yes');
+    if (noBtn && yesBtn) dodge(noBtn, yesBtn);
+  }
+
+  const no1 = document.getElementById("no1");
+  const no2 = document.getElementById("no2");
+  const yes1 = document.getElementById("yes1");
+  const yes2 = document.getElementById("yes2");
+
+  if (no1) {
+    no1.addEventListener("touchstart", () => dodge(no1, yes1));
+    no1.addEventListener("click", () => dodge(no1, yes1));
+  }
+
+  if (no2) {
+    no2.addEventListener("touchstart", () => dodge(no2, yes2));
+    no2.addEventListener("click", () => dodge(no2, yes2));
+  }
+
+  setInitialNoPosition();
+
+  // Heart rain
+  setInterval(() => {
+    const heart = document.createElement("div");
+    heart.className = "heart";
+    heart.innerHTML = "💖";
+    heart.style.left = Math.random() * 100 + "vw";
+    heart.style.fontSize = (16 + Math.random() * 20) + "px";
+    document.body.appendChild(heart);
+    setTimeout(() => heart.remove(), 4000);
+  }, 900);
+</script>
+
+</body>
+</html>
